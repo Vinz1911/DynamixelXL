@@ -1,0 +1,7 @@
+/home/pi/Software/DynamixelXL/cmake-build-debug-remote/CMakeFiles/install/strip.dir
+/home/pi/Software/DynamixelXL/cmake-build-debug-remote/CMakeFiles/edit_cache.dir
+/home/pi/Software/DynamixelXL/cmake-build-debug-remote/CMakeFiles/rebuild_cache.dir
+/home/pi/Software/DynamixelXL/cmake-build-debug-remote/CMakeFiles/DynamixelDemo.dir
+/home/pi/Software/DynamixelXL/cmake-build-debug-remote/CMakeFiles/list_install_components.dir
+/home/pi/Software/DynamixelXL/cmake-build-debug-remote/CMakeFiles/install.dir
+/home/pi/Software/DynamixelXL/cmake-build-debug-remote/CMakeFiles/install/local.dir

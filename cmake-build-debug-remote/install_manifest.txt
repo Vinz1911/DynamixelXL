@@ -1,0 +1,3 @@
+/usr/local/include/DynamixelXL/dynamixel_xl.h
+/usr/local/include/DynamixelXL/dynamixel_xl.cpp
+/usr/local/include/DynamixelXL/dynamixel_address_table.cpp
