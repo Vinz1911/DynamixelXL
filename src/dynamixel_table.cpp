@@ -66,5 +66,11 @@ enum DynamixelTable {
     /**
      * dynamixel specific codes
      */
-     ADDR_XL_GROUP_WRITE_LEN = 4
+     XL_GROUP_WRITE_LEN = 4,
+     XL_CONTROL_MODE_VELOCITY = 1,
+     XL_CONTROL_MODE_POSITION = 3,
+     XL_CONTROL_MODE_EXTENDED_POSITION = 4,
+     XL_CONTROL_MODE_PWM = 16,
+     XL_DRIVE_MODE_NORMAL = 0,
+     XL_DRIVE_MODE_REVERSED = 1,
 };

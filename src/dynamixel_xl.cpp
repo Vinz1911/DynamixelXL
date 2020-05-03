@@ -440,8 +440,8 @@ void DynamixelXL::m_set_large_register(uint8_t dxl_id, uint16_t address, uint32_
  * @param dxl2_value the value to be written for the second dynamixel
  */
 void DynamixelXL::m_set_group_register(uint8_t dxl1_id, uint8_t dxl2_id, uint16_t address, uint8_t *dxl1_value, uint8_t *dxl2_value) {
-    uint8_t dxl1_param = m_group_bulk_write.addParam(dxl1_id, address, ADDR_XL_GROUP_WRITE_LEN, dxl1_value);
-    uint8_t dxl2_param = m_group_bulk_write.addParam(dxl2_id, address, ADDR_XL_GROUP_WRITE_LEN, dxl2_value);
+    uint8_t dxl1_param = m_group_bulk_write.addParam(dxl1_id, address, XL_GROUP_WRITE_LEN, dxl1_value);
+    uint8_t dxl2_param = m_group_bulk_write.addParam(dxl2_id, address, XL_GROUP_WRITE_LEN, dxl2_value);
     m_get_validated_param(dxl1_id, dxl2_id, dxl1_param, dxl2_param);
 
     uint8_t dxl_result = m_group_bulk_write.txPacket();
