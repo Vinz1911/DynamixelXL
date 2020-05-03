@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/DynamixelDemo.dir/example/main.cpp.o  -o DynamixelDemo -ldxl_sbc_cpp -lrt 
