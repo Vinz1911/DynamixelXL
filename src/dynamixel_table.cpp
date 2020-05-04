@@ -17,6 +17,12 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+/**
+ * get information's about the meaning from here
+ * http://emanual.robotis.com/docs/en/dxl/x/xl430-w250/#control-table-of-eeprom-area
+ * http://emanual.robotis.com/docs/en/dxl/x/xl430-w250/#control-table-of-ram-area
+ */
+
 enum DynamixelTable {
     /**
      * EEPROM based codes
