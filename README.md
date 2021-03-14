@@ -1,12 +1,12 @@
 <div align="center">
     <h1>
         <br>
-            DynamixelXL
+            Dynamixel
         <br>
     </h1>
 </div>
 
-`DynamixelXL` is a simple and easy way to deal with the Dynamixel XL430 Servo. It's fast and based on the `DynamixelSDK`. 
+`Dynamixel` is a simple and easy way to deal with the Dynamixel XL430 Servo. It's fast and based on the `DynamixelSDK`. 
 
 ## Features:
 - [X] fast and easy to understand
@@ -15,7 +15,7 @@
 - [X] `NOTE: DynamixelSDK is required!` get it from here and install it to `/usr/local/include`: [DynamixelSDK](https://github.com/ROBOTIS-GIT/DynamixelSDK) 
 
 ## License:
-[![License](https://img.shields.io/badge/license-GPLv3-blue.svg?longCache=true&style=flat)](https://github.com/Vinz1911/DynamixelXL/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-GPLv3-blue.svg?longCache=true&style=flat)](https://github.com/Vinz1911/Dynamixel/blob/master/LICENSE)
 
 ## C++ Version:
 [![C++17](https://img.shields.io/badge/C++-17-blue.svg?logo=c%2B%2B&style=flat)](https://isocpp.org)
@@ -35,7 +35,7 @@ sudo make install
 #include "dynamixel_xl.cpp"
 
 // create instance of the dynamixel 
-DynamixelXL dynamixel = DynamixelXL();
+Dynamixel dynamixel = Dynamixel();
 if(!dynamixel.set_open()) {
     printf("failed: could not open port, please check connection!");
 }
@@ -50,7 +50,7 @@ if(!dynamixel.set_open()) {
 dynamixel.set_led(DXL_ID, true);
 
 // set the operating mode to velocity
-dynamixel.set_operating_mode(DXL_ID, XL_CONTROL_MODE_VELOCITY);
+dynamixel.set_operating_mode(DXL_ID, ADDR_CONTROL_MODE_VELOCITY);
 // enable torque for the dynamixel
 dynamixel.set_torque(DXL_ID, true);
 // set maximum speed

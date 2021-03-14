@@ -1,5 +1,5 @@
 /*
- * DynamixelXL
+ * Dynamixel
  *
  * Copyright (C) 2020 Vinzenz Weist Vinz1911@gmail.com
  *
@@ -17,18 +17,29 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-#ifndef DYNAMIXEL_DYNAMIXEL_XL_H
-#define DYNAMIXEL_DYNAMIXEL_XL_H
+#ifndef DYNAMIXEL_DYNAMIXEL_H
+#define DYNAMIXEL_DYNAMIXEL_H
 
 #include <cstdio>
 #include <cstdint>
 #include <vector>
 #include <dynamixel_sdk.h>
-#include "dynamixel_table.cpp"
+#include "dynamixel_address_table.h"
 
-class DynamixelXL {
+class Dynamixel {
 // public declaration
 public:
+    /**
+     * initialize dynamixel class
+     * @param t_device_name the device path | default -> "/dev/ttyACM0"
+     * @param t_protocol_version the protocol version | default -> 2.0
+     * @param t_baud_rate the baudrate | default -> 1_000_000
+     */
+    explicit Dynamixel(const char* t_device_name = "/dev/ttyACM0", float t_protocol_version = 2.0, int t_baud_rate = 1000000):
+            m_device_name(t_device_name),
+            m_protocol_version(t_protocol_version),
+            m_baud_rate(t_baud_rate) {
+    };
     /**
      * open a connection to the dynamixel
      * @return true if success otherwise false
@@ -298,17 +309,6 @@ public:
      * @param t_dxl2_position goal t_position value -> 0-4096
      */
     void set_group_goal_position(uint8_t t_dxl1_id, uint8_t t_dxl2_id, uint32_t t_dxl1_position, uint32_t t_dxl2_position);
-    /**
-     * initialize dynamixel class
-     * @param t_device_name the device path | default -> "/dev/ttyACM0"
-     * @param t_protocol_version the protocol version | default -> 2.0
-     * @param t_baud_rate the baudrate | default -> 1_000_000
-     */
-    explicit DynamixelXL(const char* t_device_name = "/dev/ttyACM0", float t_protocol_version = 2.0, int t_baud_rate = 1000000):
-            m_device_name(t_device_name),
-            m_protocol_version(t_protocol_version),
-            m_baud_rate(t_baud_rate) {
-    };
 
 // private declaration
 private:
@@ -409,4 +409,4 @@ private:
     void m_set_group_register(uint8_t t_dxl1_id, uint8_t t_dxl2_id, uint16_t t_address, uint8_t *t_dxl1_value, uint8_t *t_dxl2_value);
 };
 
-#endif //DYNAMIXEL_DYNAMIXEL_XL_H
+#endif

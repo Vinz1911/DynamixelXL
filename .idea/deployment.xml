@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" serverName="Robotis">
     <serverData>
-      <paths name="Remote Host (137968d1-09a0-47dc-aba9-e215d568214f)">
+      <paths name="Remote Host (c84ac441-290d-4753-8e09-f20df4529faa)">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/pi/Software/DynamixelXL" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/tmp.lklVX24h5X" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-remote" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
           </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="Robotis">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/robotis" local="$PROJECT_DIR$" web="/" />
+          </mappings>
         </serverdata>
       </paths>
     </serverData>

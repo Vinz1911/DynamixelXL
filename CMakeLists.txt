@@ -1,10 +1,19 @@
-cmake_minimum_required(VERSION 3.13)
-project(DynamixelXL)
-include_directories(/usr/local/include/dynamixel_sdk)
-link_libraries(-ldxl_sbc_cpp)
-link_libraries(-lrt)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.16)
+PROJECT(Dynamixel CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+INCLUDE_DIRECTORIES(/usr/local/include/dynamixel_sdk)
 
-add_executable(DynamixelDemo example/main.cpp)
-install(FILES src/dynamixel_xl.h src/dynamixel_xl.cpp src/dynamixel_table.cpp DESTINATION /usr/local/include/DynamixelXL)
+IF(CMAKE_SYSTEM_NAME STREQUAL Linux)
+    IF(CMAKE_SYSTEM_PROCESSOR STREQUAL arm)
+        LINK_LIBRARIES(-ldxl_sbc_cpp)
+    ENDIF()
+    IF(CMAKE_SYSTEM_PROCESSOR STREQUAL x86_64 OR CMAKE_HOST_SYSTEM_PROCESSOR STREQUAL amd64)
+        LINK_LIBRARIES(-ldxl_x64_cpp)
+    ENDIF()
+    LINK_LIBRARIES(-lrt)
+ENDIF()
+
+SET(CMAKE_CXX_STANDARD 17)
+
+ADD_EXECUTABLE(DynamixelDemo example/main.cpp src/dynamixel.cpp)
+# install(FILES src/dynamixel.h src/dynamixel.cpp src/dynamixel_address_table.h DESTINATION /usr/local/include/Dynamixel)

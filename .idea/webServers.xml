@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="eacc9c33-a3a4-4a27-84c7-b9789f1fc391" name="Robotis">
+        <fileTransfer rootFolder="/root" accessType="SFTP" host="157.90.144.143" port="22" sshConfigId="dedd431b-2dca-45aa-be36-3d591d8d65db" sshConfig="root@157.90.144.143:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
